@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FinalDraft DocumentType="Script" Template="No" Version="1">
+  <Title>PROJECT TITLE</Title>
+  <Issue>ISSUE #1</Issue>
+  <Writer>WRITER NAME</Writer>
+  <TitlePage>
+    <Paragraph Type="Title">
+      <Text>PROJECT TITLE</Text>
+    </Paragraph>
+    <Paragraph Type="Subtitle">
+      <Text>ISSUE #1: ISSUE TITLE</Text>
+    </Paragraph>
+    <Paragraph Type="Credit">
+      <Text>Written by</Text>
+    </Paragraph>
+    <Paragraph Type="Author">
+      <Text>WRITER NAME</Text>
+    </Paragraph>
+  </TitlePage>
+  <Content>
+    <Paragraph Type="Page">
+      <Text>PAGE 1: OPENING IMAGE</Text>
+    </Paragraph>
+    <Paragraph Type="Note">
+      <Text>Page beat: Establish the setting, tone, and main visual question of the sequence. Keep the total lettering light enough for the art to breathe.</Text>
+    </Paragraph>
+    <Paragraph Type="Panel">
+      <Text>Panel 1</Text>
+    </Paragraph>
+    <Paragraph Type="Description">
+      <Text>Wide establishing panel. Describe only what the artist needs to draw: location, characters present, action, mood, key props, and camera/framing if important. Avoid prose that cannot appear visually.</Text>
+    </Paragraph>
+    <Paragraph Type="Caption">
+      <Text>CAPTION TEXT GOES HERE.</Text>
+    </Paragraph>
+    <Paragraph Type="Sound Effects">
+      <Text>SFX TEXT</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CHARACTER NAME</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Dialogue balloon text goes here.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CHARACTER NAME (OP)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Off-panel dialogue uses OP, OFF, whisper, burst, small, weak, radio, or another lettering modifier in parentheses.</Text>
+    </Paragraph>
+    <Paragraph Type="Panel">
+      <Text>Panel 2</Text>
+    </Paragraph>
+    <Paragraph Type="Description">
+      <Text>Medium panel. Continue the visual action from Panel 1. Each panel should be a single drawable moment, not a chain of multiple sequential actions.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CHARACTER NAME (thought)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Thought text goes here. ScriptMagic imports this as a Thought block.</Text>
+    </Paragraph>
+    <Paragraph Type="Note">
+      <Text>Letterer note: Use sparingly for information that should not appear as reader-facing text.</Text>
+    </Paragraph>
+    <Paragraph Type="Panel">
+      <Text>Panel 3</Text>
+    </Paragraph>
+    <Paragraph Type="Description">
+      <Text>Close-up or reaction panel. If the page needs a specific layout, say so here. Otherwise, leave exact layout choices to the artist.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CHARACTER NAME</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Keep each balloon short when possible.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SECOND CHARACTER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Multiple dialogue balloons in the same panel stay in intended reading order.</Text>
+    </Paragraph>
+    <Paragraph Type="Page">
+      <Text>PAGE 2: NEXT STORY BEAT</Text>
+    </Paragraph>
+    <Paragraph Type="Note">
+      <Text>Page beat: Start each new comic page with a Page paragraph. Put only optional planning notes here before the first panel.</Text>
+    </Paragraph>
+    <Paragraph Type="Panel">
+      <Text>Panel 1</Text>
+    </Paragraph>
+    <Paragraph Type="Description">
+      <Text>Splash page, inset panel, montage panel, or standard panel description. Use the panel description for visual storytelling, not dialogue or captions.</Text>
+    </Paragraph>
+    <Paragraph Type="Caption">
+      <Text>CAPTION OR NARRATION TEXT.</Text>
+    </Paragraph>
+    <Paragraph Type="Panel">
+      <Text>Panel 2</Text>
+    </Paragraph>
+    <Paragraph Type="Description">
+      <Text>Another drawable moment. Number panels sequentially within each page, starting at Panel 1.</Text>
+    </Paragraph>
+    <Paragraph Type="Sound Effects">
+      <Text>BOOM</Text>
+    </Paragraph>
+  </Content>
+</FinalDraft>

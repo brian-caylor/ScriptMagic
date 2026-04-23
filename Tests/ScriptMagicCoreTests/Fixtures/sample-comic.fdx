@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FinalDraft DocumentType="Script" Template="No" Version="1">
+  <Title>Night Arcade</Title>
+  <Issue>1</Issue>
+  <Writer>Brian Caylor</Writer>
+  <CustomMetadata>
+    <KeepMe>Preserve this node</KeepMe>
+  </CustomMetadata>
+  <Content>
+    <Paragraph Type="Page"><Text>PAGE 1: Cold Open</Text></Paragraph>
+    <Paragraph Type="Panel"><Text>Panel 1</Text></Paragraph>
+    <Paragraph Type="Description"><Text>A rainy alley behind an old arcade. Neon flickers in the puddles.</Text></Paragraph>
+    <Paragraph Type="Character"><Text>MARA</Text></Paragraph>
+    <Paragraph Type="Dialogue"><Text>This place was supposed to be closed.</Text></Paragraph>
+    <Paragraph Type="Caption"><Text>Three minutes before midnight.</Text></Paragraph>
+    <Paragraph Type="Sound Effects"><Text>KRAK</Text></Paragraph>
+    <Paragraph Type="Character"><Text>MARA (thought)</Text></Paragraph>
+    <Paragraph Type="Dialogue"><Text>Please do not be haunted.</Text></Paragraph>
+    <Paragraph Type="MysteryElement" Custom="yes"><Text>Unknown but important.</Text></Paragraph>
+    <Paragraph Type="Panel"><Text>Panel 2</Text></Paragraph>
+    <Paragraph Type="Description"><Text>The arcade door opens by itself.</Text></Paragraph>
+  </Content>
+</FinalDraft>

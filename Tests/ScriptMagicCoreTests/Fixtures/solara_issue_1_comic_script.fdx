@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FinalDraft DocumentType="Script" Template="No" Version="1">
+  <TitlePage>
+    <Paragraph Type="Title">
+      <Text>SOLARA #1</Text>
+    </Paragraph>
+    <Paragraph Type="Subtitle">
+      <Text>FIRST LIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Credit">
+      <Text>Story by</Text>
+    </Paragraph>
+    <Paragraph Type="Author">
+      <Text>Brian</Text>
+    </Paragraph>
+    <Paragraph Type="Source">
+      <Text>Polished v1 (from draft v1)</Text>
+    </Paragraph>
+  </TitlePage>
+  <Content>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 1 (1 PANEL)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>FULL-PAGE SPLASH</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Late afternoon in Meridian City, in the polished downtown core known as the Glass District. A brutal traffic accident has just happened in the middle of a busy intersection. An SUV lies overturned on its side, its frame crushed and smoking. A delivery van is mangled nearby. Glass litters the street. A traffic light hangs crooked. Civilians crowd the sidewalks, many already filming on their phones. First responders are arriving, but the whole scene still feels raw, loud, and unstable.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CAPTION</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>MERIDIAN CITY. 4:17 PM.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 2 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Captain DANIELA RUIZ, helmet on, already commanding the scene.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Back them up another ten feet. Keep that lane clear.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A PARAMEDIC crouches at the overturned SUV, trying to reach inside through shattered glass.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>PARAMEDIC</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>I've got one trapped. Driver's conscious. Barely.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A FIREFIGHTER checks the vehicle undercarriage while another sprays foam near a leaking line.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>FIREFIGHTER 1</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Fuel's coming off the line.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>FIREFIGHTER 2</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>We don't have long.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A young office worker tries to push closer, frantic.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>OFFICE WORKER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Can I help? I can help—</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>OFFICER (OFF)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Back up! Back up now!</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela kneels near the vehicle, studying the angle of the overturned SUV.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>If this shifts, he's crushed.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 3 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Inside the SUV through cracked glass: the DRIVER, bloodied, pinned at a terrible angle.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DRIVER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Help me— please—</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A paramedic reaches in as far as she can, but can't get leverage.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>PARAMEDIC</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Stay with me. Don't move.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela confers with her team.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Can we crib the frame?</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>FIREFIGHTER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Not cleanly. Too much rollover stress.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A bystander records everything on their phone, whispering in shock to a livestream or call.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>BYSTANDER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Oh my God, oh my God, he's still in there—</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela looking up at the wreck, jaw tight.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>We lose that support point, we lose him.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 4 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A hiss of steam. Foam spreading. Emergency lights strobing against glass towers.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SFX</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>HSSSSSS</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The trapped driver coughs, then goes suddenly quiet.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>PARAMEDIC (OFF)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Sir? Sir, stay with me—</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The crowd's attention shifts all at once, heads turning upward and outward toward something just off-panel.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CROWD VOICE 1</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>What is that?</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>CROWD VOICE 2</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Wait— wait—</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela looks up, squinting through smoke and reflected light.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 5 (1 PANEL)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>HALF-SPLASH / TITLE PAGE</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>SOLARA steps into view for the first time.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She is tall, impossibly muscular, blonde, radiant in a blue-and-white costume with star motifs, white gloves, white boots, cape catching the wind. She is not posed for the crowd. Her gaze is on the wreck.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The city stares.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>TITLE</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>SOLARA</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>ISSUE TITLE</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>FIRST LIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 6 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara studies the angle of the SUV.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela stares for half a beat, then snaps back into professional mode.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Can you hold the front end stable?</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Close on Solara's face. No smile.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SOLARA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Tell me where.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela points to a stress point beneath the chassis.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>There. Keep it from rolling. We extract on my call.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara crouches at the vehicle, one gloved hand finding purchase beneath twisted metal.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 7 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara lifts. The metal groans. Asphalt cracks under the shifted load.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SFX</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>KRRRNNNK</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela barks orders instantly.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Move! Move now!</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Firefighters surge in under the newly stabilized angle. A paramedic reaches the driver properly for the first time.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>PARAMEDIC</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>I've got him— I've got him—</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara holding the weight in place, muscles under strain, jaw set.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 8 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The driver is pulled free, one responder on each side.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>FIREFIGHTER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Clear!</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Daniela shepherds the extraction path.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>DANIELA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Go, go, go— medic unit now!</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A dozen phones pointed at Solara from different angles.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A CHILD in the crowd stares open-mouthed.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The driver is loaded onto a stretcher while Solara still holds the vehicle steady.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>PARAMEDIC (OFF)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>He's alive!</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 9 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara sets the SUV back down onto the asphalt.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SFX</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>THM</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A beat of silence. Foam hisses. Sirens continue in the distance. Everyone just stares.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>One person starts clapping. Just one. The rest of the crowd stays still.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Wide shot: Solara standing in the wrecked intersection while the city records her into history.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 10 (6 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>MONTAGE PAGE — THE FOOTAGE SPREADS</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A phone screen uploading a shaky vertical video.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A local TV station replaying the lift with a lower-third: DOWNTOWN HERO?</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A group text exploding with messages.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>TEXT 1</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>IS THIS REAL</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>TEXT 2</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>NO WAY</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>TEXT 3</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>TURN ON CHANNEL 8</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A social feed filling with freeze-frames of Solara holding the vehicle.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>An office break room where workers crowd around a monitor.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 6</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A side-by-side of news sites and clipped reposts, all using slightly different language for the same impossible image.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 11 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>At the Metro Herald newsroom, NINA ALVAREZ watches the footage on her monitor, eyes narrowing.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>In a sleek Helion office, MARCUS VALE watches the same footage. He goes very still.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>At the front desk of Elena's apartment building, MALIK THOMPSON glances up from his monitor to a little TV replaying the clip.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MALIK</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Well. That's new.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Back to Nina, already scrubbing frame-by-frame.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Marcus, not looking away from the screen.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MARCUS</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Get me the incident footage. All of it.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 12 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Interior, Elena's apartment. The door opens. Solara enters, alone now, shoulders tight with strain.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She shuts the door behind her and braces one hand against it. The apartment is dim.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She crosses toward the kitchen counter, movement less steady than it was outside.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Close on the gold star amulet at her throat as her trembling hand reaches for it.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 13 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara pulls the amulet free from around her neck.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The transformation begins collapsing. A physical unmaking: mass receding, posture shrinking, hair darkening and shortening.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Halfway between forms. Neither Elena nor Solara.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>By the end of the page: ELENA VOSS, thin, brown-haired, visibly wrecked, barely upright.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 14 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena catches herself on the counter before she can fall.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Her knees hit the floor hard.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SFX</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>THK</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She tries to breathe through a wave of full-body shaking.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She reaches for the sink, misses, and dry-heaves instead.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena on the floor, small against the empty apartment.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 15 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A knock at the apartment door, or intercom buzz.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SFX</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>BZZZT</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena wipes her mouth with the back of her hand before she opens the door.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She opens the door. DR. SAIRA THORNE steps in with a small medical bag, and one look tells her everything.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>You pushed too long.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena gives the weakest version of a shrug.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>ELENA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Somebody was going to die.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 16 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Saira checks Elena's pulse and skin temperature.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Sit down.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena sits because she has to, not because she wants to.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Saira taking a quick reading or listening to Elena's breathing.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>You're colder than last time.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena, from the chair. Eyes half-shut.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>ELENA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Good to know I'm trending.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Saira does not smile.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>This isn't recovery.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 17 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena looks away.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>ELENA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Then what is it?</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Close on Saira.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Borrowing.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Silence between them. Elena knows exactly what that means.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Saira continues.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>SAIRA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>You can tell yourself it was worth it. That doesn't make this survivable.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 18 (5 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Metro Herald newsroom. Nina replaying footage, cross-referencing timestamps.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Her editor, EVELYN CHO, stands behind her desk.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>EVELYN</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Tell me you're not pitching me "mystery superwoman saves city."</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Nina doesn't look away from the screen.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>NINA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>I'm pitching that everybody's looking at her, and nobody's looking at what happened around her.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Evelyn folds her arms.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>EVELYN</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>You've got one day before this becomes opinion television in print.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 5</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Nina finally turns.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>NINA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Everybody's looking at her. I want to know who started flinching first.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 19 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Nina starts pulling incident records, emergency timestamps, and city-adjacent infrastructure references.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A document footer bearing a Helion civic-partnership mark.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Nina narrowing her eyes.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She circles or flags the Helion reference.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 20 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A secure Helion conference room. Marcus at the head of a small table. A few trusted staff, including ADRIAN VALEZ, present.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>On a wall monitor: still image of Solara holding the SUV.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MARCUS</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>This is now a legacy containment risk.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Adrian watches the image with visible unease.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Marcus continues.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MARCUS</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>I want every angle, every upload, every preserved municipal feed. No outreach without my approval.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 21 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>One Helion staffer.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>STAFFER</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>Do we believe the subject survived the Meridian incident?</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Marcus waits a fraction too long.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Close on Marcus.</Text>
+    </Paragraph>
+    <Paragraph Type="Character">
+      <Text>MARCUS</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue">
+      <Text>We don't know what survived.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Adrian, unsettled by the phrasing.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 22 (4 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Back in Elena's apartment at night. Saira gone. The room is dim except for city light and a single lamp.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>A TV segment silently replaying the rescue. Elena watches from the couch, wrapped in oversized clothes, knees drawn up.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She turns the TV off.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 4</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena still on the couch in the dark. The TV screen blank. One hand resting on the remote.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 23 (3 PANELS)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 1</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena walks to the apartment window. Meridian glows outside. Distant sirens. Headlights. Screens. Life going on.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 2</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>She places one hand gently against the glass.</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>PANEL 3</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>From behind Elena, framed to include the dark window reflection.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading">
+      <Text>PAGE 24 (1 PANEL)</Text>
+    </Paragraph>
+    <Paragraph Type="Shot">
+      <Text>FULL-PAGE FINAL IMAGE</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>In the glass reflection, we do not see Elena.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>We see SOLARA.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Same pose. Same hand on the glass. But stronger, taller, more certain, more fully present.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Elena is in the room.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>Solara is in the reflection.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>The city glows behind them both.</Text>
+    </Paragraph>
+    <Paragraph Type="Action">
+      <Text>No dialogue.</Text>
+    </Paragraph>
+  </Content>
+</FinalDraft>

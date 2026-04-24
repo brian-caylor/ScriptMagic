@@ -87,7 +87,11 @@ public struct FDXComicWriter {
 
         for page in model.pages {
             let pageHeading = page.title.isEmpty ? "PAGE \(page.number)" : "PAGE \(page.number): \(page.title)"
-            paragraphElements.append(paragraph(type: "Page", text: pageHeading))
+            var attributes = ["Layout": page.layout.rawValue]
+            if let expectedPanelCount = page.expectedPanelCount {
+                attributes["ExpectedPanels"] = "\(expectedPanelCount)"
+            }
+            paragraphElements.append(paragraph(type: "Page", text: pageHeading, attributes: attributes))
 
             if !page.beatNote.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 paragraphElements.append(paragraph(type: "Note", text: page.beatNote))
@@ -113,19 +117,42 @@ public struct FDXComicWriter {
         switch block.type {
         case .dialogue, .thought:
             let speaker = formattedSpeaker(for: block)
+            var characterAttributes: [String: String] = [:]
+            if block.delivery != .none {
+                characterAttributes["Delivery"] = block.delivery.rawValue
+            }
             return [
-                paragraph(type: "Character", text: speaker),
-                paragraph(type: "Dialogue", text: block.text)
+                paragraph(type: "Character", text: speaker, attributes: characterAttributes),
+                paragraph(type: "Dialogue", text: block.text, attributes: lockedAttributes(for: block))
             ]
 
         case .caption:
-            return [paragraph(type: "Caption", text: block.text)]
+            var attributes = lockedAttributes(for: block)
+            if !block.speaker.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                attributes["Speaker"] = block.speaker.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+            return [paragraph(type: "Caption", text: block.text, attributes: attributes)]
 
         case .sfx:
-            return [paragraph(type: "Sound Effects", text: block.text)]
+            return [paragraph(type: "Sound Effects", text: block.text, attributes: lockedAttributes(for: block))]
+
+        case .sign:
+            return [paragraph(type: "Sign", text: block.text, attributes: lockedAttributes(for: block))]
+
+        case .screen:
+            return [paragraph(type: "Screen", text: block.text, attributes: lockedAttributes(for: block))]
+
+        case .textMessage:
+            return [paragraph(type: "Text Message", text: block.text, attributes: lockedAttributes(for: block))]
+
+        case .chyron:
+            return [paragraph(type: "Chyron", text: block.text, attributes: lockedAttributes(for: block))]
+
+        case .titleCard:
+            return [paragraph(type: "Title Card", text: block.text, attributes: lockedAttributes(for: block))]
 
         case .note:
-            return [paragraph(type: "Note", text: block.text)]
+            return [paragraph(type: "Note", text: block.text, attributes: lockedAttributes(for: block))]
 
         case .unknown:
             if
@@ -146,6 +173,11 @@ public struct FDXComicWriter {
         let name = block.speaker.trimmingCharacters(in: .whitespacesAndNewlines)
         let modifier = block.modifier.trimmingCharacters(in: .whitespacesAndNewlines)
 
+        if block.delivery != .none, block.delivery != .custom {
+            let delivery = block.delivery.displayName
+            return name.isEmpty ? "(\(delivery))" : "\(name) (\(delivery))"
+        }
+
         if block.type == .thought, modifier.isEmpty {
             return name.isEmpty ? "(thought)" : "\(name) (thought)"
         }
@@ -157,9 +189,16 @@ public struct FDXComicWriter {
         return name.isEmpty ? "(\(modifier))" : "\(name) (\(modifier))"
     }
 
-    private func paragraph(type: String, text: String) -> XMLElement {
+    private func lockedAttributes(for block: ComicTextBlock) -> [String: String] {
+        block.isLocked ? ["Locked": "true"] : [:]
+    }
+
+    private func paragraph(type: String, text: String, attributes: [String: String] = [:]) -> XMLElement {
         let paragraph = XMLElement(name: "Paragraph")
         paragraph.addAttribute(XMLNode.attribute(withName: "Type", stringValue: type) as! XMLNode)
+        for (name, value) in attributes.sorted(by: { $0.key < $1.key }) where !value.isEmpty {
+            paragraph.addAttribute(XMLNode.attribute(withName: name, stringValue: value) as! XMLNode)
+        }
 
         let textElement = XMLElement(name: "Text", stringValue: text)
         paragraph.addChild(textElement)

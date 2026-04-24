@@ -68,6 +68,28 @@ struct ScriptMagicApp: App {
                     NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.note)
                 }
                 .keyboardShortcut("n", modifiers: [.command, .shift])
+
+                Divider()
+
+                Button("Sign") {
+                    NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.sign)
+                }
+
+                Button("Screen") {
+                    NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.screen)
+                }
+
+                Button("Text Message") {
+                    NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.textMessage)
+                }
+
+                Button("Chyron") {
+                    NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.chyron)
+                }
+
+                Button("Title Card") {
+                    NotificationCenter.default.post(name: .scriptMagicAddBlock, object: ComicBlockType.titleCard)
+                }
             }
 
             CommandMenu("Format") {
@@ -96,6 +118,28 @@ struct ScriptMagicApp: App {
                         NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.note)
                     }
                     .keyboardShortcut("5", modifiers: [.command, .option])
+
+                    Divider()
+
+                    Button("Sign") {
+                        NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.sign)
+                    }
+
+                    Button("Screen") {
+                        NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.screen)
+                    }
+
+                    Button("Text Message") {
+                        NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.textMessage)
+                    }
+
+                    Button("Chyron") {
+                        NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.chyron)
+                    }
+
+                    Button("Title Card") {
+                        NotificationCenter.default.post(name: .scriptMagicSetBlockType, object: ComicBlockType.titleCard)
+                    }
                 }
 
                 Button("Cycle Block Type") {

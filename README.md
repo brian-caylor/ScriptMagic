@@ -37,6 +37,14 @@ ScriptMagic uses Final Draft XML as the primary file container and writes comic-
 
 The compatibility goal is preserve-and-interoperate where practical, not strict Final Draft cloning. Unknown root metadata and unknown paragraph XML are preserved when possible.
 
+ScriptMagic also stores comic-native semantics as readable FDX attributes:
+
+- `Layout` and `ExpectedPanels` on `Page` paragraphs.
+- `Speaker` and `Locked` on `Caption` paragraphs.
+- `Delivery` on `Character` paragraphs for OP/OFF/phone/voicemail/memory/thought/whisper handling.
+- `Locked` on protected reader-facing paragraphs.
+- Reader-facing in-panel text types: `Sign`, `Screen`, `Text Message`, `Chyron`, and `Title Card`.
+
 ## Ideal Comic FDX Template
 
 Use `Templates/ideal-comic-script.fdx` as the preferred structure for generated or converted comic scripts. `Templates/COMIC_FDX_TEMPLATE_GUIDE.md` explains how to convert film-style `.fdx` output into ScriptMagic's comic-native page/panel format.

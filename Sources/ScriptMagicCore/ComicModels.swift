@@ -27,6 +27,8 @@ public struct ComicPage: Codable, Equatable, Identifiable, Sendable {
     public var number: Int
     public var title: String
     public var beatNote: String
+    public var layout: ComicPageLayout
+    public var expectedPanelCount: Int?
     public var panels: [ComicPanel]
 
     public init(
@@ -34,12 +36,16 @@ public struct ComicPage: Codable, Equatable, Identifiable, Sendable {
         number: Int,
         title: String = "",
         beatNote: String = "",
+        layout: ComicPageLayout = .standard,
+        expectedPanelCount: Int? = nil,
         panels: [ComicPanel] = [ComicPanel(number: 1)]
     ) {
         self.id = id
         self.number = number
         self.title = title
         self.beatNote = beatNote
+        self.layout = layout
+        self.expectedPanelCount = expectedPanelCount
         self.panels = panels
     }
 }
@@ -68,7 +74,9 @@ public struct ComicTextBlock: Codable, Equatable, Identifiable, Sendable {
     public var type: ComicBlockType
     public var speaker: String
     public var modifier: String
+    public var delivery: ComicDelivery
     public var text: String
+    public var isLocked: Bool
     public var preservedXML: String?
     public var sourceParagraphType: String?
 
@@ -77,7 +85,9 @@ public struct ComicTextBlock: Codable, Equatable, Identifiable, Sendable {
         type: ComicBlockType,
         speaker: String = "",
         modifier: String = "",
+        delivery: ComicDelivery = .none,
         text: String = "",
+        isLocked: Bool = false,
         preservedXML: String? = nil,
         sourceParagraphType: String? = nil
     ) {
@@ -85,9 +95,63 @@ public struct ComicTextBlock: Codable, Equatable, Identifiable, Sendable {
         self.type = type
         self.speaker = speaker
         self.modifier = modifier
+        self.delivery = delivery
         self.text = text
+        self.isLocked = isLocked
         self.preservedXML = preservedXML
         self.sourceParagraphType = sourceParagraphType
+    }
+}
+
+public enum ComicPageLayout: String, Codable, CaseIterable, Identifiable, Sendable {
+    case standard
+    case splash
+    case halfSplash
+    case doublePageSpread
+    case montage
+    case grid
+    case custom
+
+    public var id: String { rawValue }
+
+    public var displayName: String {
+        switch self {
+        case .standard: "Standard"
+        case .splash: "Splash"
+        case .halfSplash: "Half-Splash"
+        case .doublePageSpread: "Double-Page Spread"
+        case .montage: "Montage"
+        case .grid: "Grid"
+        case .custom: "Custom"
+        }
+    }
+}
+
+public enum ComicDelivery: String, Codable, CaseIterable, Identifiable, Sendable {
+    case none
+    case op
+    case off
+    case phone
+    case voicemail
+    case memory
+    case thought
+    case whisper
+    case custom
+
+    public var id: String { rawValue }
+
+    public var displayName: String {
+        switch self {
+        case .none: "None"
+        case .op: "OP"
+        case .off: "OFF"
+        case .phone: "Phone"
+        case .voicemail: "Voicemail"
+        case .memory: "Memory"
+        case .thought: "Thought"
+        case .whisper: "Whisper"
+        case .custom: "Custom"
+        }
     }
 }
 

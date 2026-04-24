@@ -22,6 +22,30 @@ struct ComicPageView: View {
             }
             .padding(.bottom, 2)
 
+            HStack(spacing: 10) {
+                Picker("Layout", selection: $page.layout) {
+                    ForEach(ComicPageLayout.allCases) { layout in
+                        Text(layout.displayName).tag(layout)
+                    }
+                }
+                .frame(width: 220)
+
+                Stepper(
+                    page.expectedPanelCount == nil ? "Expected panels: Any" : "Expected panels: \(page.expectedPanelCount ?? 0)",
+                    value: expectedPanelCountBinding,
+                    in: 0...24
+                )
+                .frame(width: 220)
+
+                Button {
+                    page.expectedPanelCount = nil
+                } label: {
+                    Image(systemName: "xmark.circle")
+                }
+                .buttonStyle(.borderless)
+                .help("Clear expected panel count")
+            }
+
             TextField("Page beat note", text: $page.beatNote, axis: .vertical)
                 .textFieldStyle(.plain)
                 .foregroundStyle(.secondary)
@@ -39,5 +63,13 @@ struct ComicPageView: View {
         .padding(18)
         .background(Color(nsColor: .controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+
+    private var expectedPanelCountBinding: Binding<Int> {
+        Binding {
+            page.expectedPanelCount ?? 0
+        } set: { value in
+            page.expectedPanelCount = value == 0 ? nil : value
+        }
     }
 }

@@ -87,7 +87,13 @@ public struct FDXComicReader {
             case .page:
                 flushPage()
                 let parsed = parseNumberedHeading(text, fallback: model.pages.count + 1)
-                currentPage = ComicPage(number: parsed.number, title: parsed.remainder, panels: [])
+                currentPage = ComicPage(
+                    number: parsed.number,
+                    title: parsed.remainder,
+                    layout: parsePageLayout(paragraph.attribute(forName: "Layout")?.stringValue),
+                    expectedPanelCount: parseExpectedPanelCount(paragraph.attribute(forName: "ExpectedPanels")?.stringValue ?? text),
+                    panels: []
+                )
                 pendingSpeaker = nil
 
             case .panel:
@@ -107,30 +113,57 @@ public struct FDXComicReader {
                 pendingSpeaker = nil
 
             case .character:
-                pendingSpeaker = parseSpeaker(text)
+                var parsedSpeaker = parseSpeaker(text)
+                if let delivery = paragraph.attribute(forName: "Delivery")?.stringValue {
+                    parsedSpeaker.delivery = parseDelivery(delivery, fallbackModifier: parsedSpeaker.modifier)
+                }
+                pendingSpeaker = parsedSpeaker
 
             case .dialogue:
                 ensurePanel()
-                let speaker = pendingSpeaker
+                let speaker = pendingSpeaker ?? ParsedSpeaker(name: "", modifier: "", delivery: .none)
+                let locked = isLocked(paragraph)
+                if let convertedType = convertedCharacterLabelType(speaker.name) {
+                    currentPanel?.textBlocks.append(
+                        ComicTextBlock(
+                            type: convertedType,
+                            speaker: convertedType == .caption ? speaker.modifier : "",
+                            text: text,
+                            isLocked: locked,
+                            sourceParagraphType: rawType
+                        )
+                    )
+                } else {
+                    currentPanel?.textBlocks.append(
+                        ComicTextBlock(
+                            type: speaker.delivery == .thought ? .thought : .dialogue,
+                            speaker: speaker.name,
+                            modifier: speaker.modifier,
+                            delivery: speaker.delivery,
+                            text: text,
+                            isLocked: locked,
+                            sourceParagraphType: rawType
+                        )
+                    )
+                }
+                pendingSpeaker = nil
+
+            case .caption:
+                ensurePanel()
                 currentPanel?.textBlocks.append(
                     ComicTextBlock(
-                        type: speaker?.isThought == true ? .thought : .dialogue,
-                        speaker: speaker?.name ?? "",
-                        modifier: speaker?.modifier ?? "",
+                        type: .caption,
+                        speaker: paragraph.attribute(forName: "Speaker")?.stringValue ?? "",
                         text: text,
+                        isLocked: isLocked(paragraph),
                         sourceParagraphType: rawType
                     )
                 )
                 pendingSpeaker = nil
 
-            case .caption:
-                ensurePanel()
-                currentPanel?.textBlocks.append(ComicTextBlock(type: .caption, text: text, sourceParagraphType: rawType))
-                pendingSpeaker = nil
-
             case .sfx:
                 ensurePanel()
-                currentPanel?.textBlocks.append(ComicTextBlock(type: .sfx, text: text, sourceParagraphType: rawType))
+                currentPanel?.textBlocks.append(ComicTextBlock(type: .sfx, text: text, isLocked: isLocked(paragraph), sourceParagraphType: rawType))
                 pendingSpeaker = nil
 
             case .note:
@@ -138,8 +171,13 @@ public struct FDXComicReader {
                     currentPage?.beatNote = text
                 } else {
                     ensurePanel()
-                    currentPanel?.textBlocks.append(ComicTextBlock(type: .note, text: text, sourceParagraphType: rawType))
+                    currentPanel?.textBlocks.append(ComicTextBlock(type: .note, text: text, isLocked: isLocked(paragraph), sourceParagraphType: rawType))
                 }
+                pendingSpeaker = nil
+
+            case let .readerFacing(type):
+                ensurePanel()
+                currentPanel?.textBlocks.append(ComicTextBlock(type: type, text: text, isLocked: isLocked(paragraph), sourceParagraphType: rawType))
                 pendingSpeaker = nil
 
             case .unknown:
@@ -148,6 +186,7 @@ public struct FDXComicReader {
                     ComicTextBlock(
                         type: .unknown,
                         text: text,
+                        isLocked: isLocked(paragraph),
                         preservedXML: paragraph.xmlString,
                         sourceParagraphType: rawType
                     )
@@ -175,13 +214,14 @@ enum FDXParagraphKind {
     case caption
     case sfx
     case note
+    case readerFacing(ComicBlockType)
     case unknown
 }
 
 struct ParsedSpeaker {
     var name: String
     var modifier: String
-    var isThought: Bool
+    var delivery: ComicDelivery
 }
 
 func contentElement(in root: XMLElement) -> XMLElement? {
@@ -203,11 +243,11 @@ func paragraphText(_ paragraph: XMLElement) -> String {
 func classifyParagraphType(_ type: String) -> FDXParagraphKind {
     let normalized = type.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
-    if normalized == "page" || normalized == "comic page" || normalized == "page heading" {
+    if normalized == "page" || normalized == "comic page" || normalized == "page heading" || normalized == "scene heading" {
         return .page
     }
 
-    if normalized == "panel" || normalized == "comic panel" {
+    if normalized == "panel" || normalized == "comic panel" || normalized == "shot" {
         return .panel
     }
 
@@ -231,7 +271,27 @@ func classifyParagraphType(_ type: String) -> FDXParagraphKind {
         return .sfx
     }
 
-    if normalized == "note" || normalized == "general" || normalized == "shot" {
+    if normalized == "sign" {
+        return .readerFacing(.sign)
+    }
+
+    if normalized == "screen" {
+        return .readerFacing(.screen)
+    }
+
+    if normalized == "text message" || normalized == "textmessage" {
+        return .readerFacing(.textMessage)
+    }
+
+    if normalized == "chyron" {
+        return .readerFacing(.chyron)
+    }
+
+    if normalized == "title card" || normalized == "titlecard" {
+        return .readerFacing(.titleCard)
+    }
+
+    if normalized == "note" || normalized == "general" {
         return .note
     }
 
@@ -269,14 +329,14 @@ func parseNumberedHeading(_ text: String, fallback: Int) -> (number: Int, remain
 func parseSpeaker(_ text: String) -> ParsedSpeaker {
     let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
     guard let open = trimmed.lastIndex(of: "("), trimmed.hasSuffix(")") else {
-        return ParsedSpeaker(name: trimmed, modifier: "", isThought: false)
+        return ParsedSpeaker(name: trimmed, modifier: "", delivery: .none)
     }
 
     let name = trimmed[..<open].trimmingCharacters(in: .whitespacesAndNewlines)
     let modifierStart = trimmed.index(after: open)
     let modifierEnd = trimmed.index(before: trimmed.endIndex)
     let modifier = String(trimmed[modifierStart..<modifierEnd]).trimmingCharacters(in: .whitespacesAndNewlines)
-    return ParsedSpeaker(name: name, modifier: modifier, isThought: modifier.lowercased().contains("thought"))
+    return ParsedSpeaker(name: name, modifier: modifier, delivery: parseDelivery(nil, fallbackModifier: modifier))
 }
 
 func appendDescription(_ text: String, to panel: inout ComicPanel?) {
@@ -284,4 +344,98 @@ func appendDescription(_ text: String, to panel: inout ComicPanel?) {
     let separator = existing.visualDescription.isEmpty ? "" : "\n\n"
     existing.visualDescription += separator + text
     panel = existing
+}
+
+func isLocked(_ paragraph: XMLElement) -> Bool {
+    let value = paragraph.attribute(forName: "Locked")?.stringValue?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    return value == "true" || value == "yes" || value == "1"
+}
+
+func parsePageLayout(_ value: String?) -> ComicPageLayout {
+    let normalized = normalizeToken(value)
+    switch normalized {
+    case "splash", "fullpagesplash":
+        return .splash
+    case "halfsplash":
+        return .halfSplash
+    case "doublepagespread", "spread":
+        return .doublePageSpread
+    case "montage", "montagepage":
+        return .montage
+    case "grid":
+        return .grid
+    case "custom":
+        return .custom
+    default:
+        return .standard
+    }
+}
+
+func parseExpectedPanelCount(_ value: String?) -> Int? {
+    guard let value else { return nil }
+    let normalized = value.lowercased()
+    if let match = normalized.range(of: #"(\d+)\s*panels?"#, options: .regularExpression) {
+        return Int(normalized[match].filter(\.isNumber))
+    }
+    return Int(value.trimmingCharacters(in: .whitespacesAndNewlines))
+}
+
+func parseDelivery(_ value: String?, fallbackModifier: String) -> ComicDelivery {
+    let normalized = normalizeToken(value?.isEmpty == false ? value : fallbackModifier)
+    switch normalized {
+    case "op":
+        return .op
+    case "off":
+        return .off
+    case "phone":
+        return .phone
+    case "voicemail", "vm":
+        return .voicemail
+    case "memory":
+        return .memory
+    case "thought":
+        return .thought
+    case "whisper":
+        return .whisper
+    case "":
+        return .none
+    default:
+        return .custom
+    }
+}
+
+func convertedCharacterLabelType(_ label: String) -> ComicBlockType? {
+    let parsed = parseSpeaker(label)
+    let normalized = normalizeToken(parsed.name)
+    switch normalized {
+    case "caption", "captions":
+        return .caption
+    case "sfx", "soundfx", "soundeffect", "soundeffects":
+        return .sfx
+    case "sign":
+        return .sign
+    case "screen":
+        return .screen
+    case "textmessage", "text":
+        return .textMessage
+    case "chyron":
+        return .chyron
+    case "titlecard":
+        return .titleCard
+    default:
+        return nil
+    }
+}
+
+func captionSpeaker(from label: String) -> String {
+    let parsed = parseSpeaker(label)
+    guard normalizeToken(parsed.name) == "caption" else { return "" }
+    return parsed.modifier
+}
+
+func normalizeToken(_ value: String?) -> String {
+    (value ?? "")
+        .trimmingCharacters(in: .whitespacesAndNewlines)
+        .lowercased()
+        .filter { $0.isLetter || $0.isNumber }
 }

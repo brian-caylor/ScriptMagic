@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+
+# Private real-script fixtures can live here without committing script content.
+Tests/PrivateFixtures/

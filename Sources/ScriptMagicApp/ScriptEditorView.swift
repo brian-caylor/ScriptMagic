@@ -134,6 +134,12 @@ struct ScriptEditorView: View {
                 Button("SFX") { addBlock(.sfx) }
                 Button("Thought") { addBlock(.thought) }
                 Button("Note") { addBlock(.note) }
+                Divider()
+                Button("Sign") { addBlock(.sign) }
+                Button("Screen") { addBlock(.screen) }
+                Button("Text Message") { addBlock(.textMessage) }
+                Button("Chyron") { addBlock(.chyron) }
+                Button("Title Card") { addBlock(.titleCard) }
             } label: {
                 Label("Lettering", systemImage: "text.bubble")
             }
@@ -196,7 +202,7 @@ struct ScriptEditorView: View {
         }
 
         let panelIndex = selectedPanelIndex(in: pageIndex) ?? max(document.model.pages[pageIndex].panels.count - 1, 0)
-        let block = ComicTextBlock(type: type)
+        let block = ComicTextBlock(type: type, delivery: type == .thought ? .thought : .none)
         document.model.pages[pageIndex].panels[panelIndex].textBlocks.append(block)
         selection = .block(document.model.pages[pageIndex].id, document.model.pages[pageIndex].panels[panelIndex].id, block.id)
     }
@@ -242,10 +248,15 @@ struct ScriptEditorView: View {
             let blockIndex = document.model.pages[pageIndex].panels[panelIndex].textBlocks.firstIndex(where: { $0.id == blockID })
         else { return }
 
-        let cycle: [ComicBlockType] = [.dialogue, .caption, .sfx, .thought, .note]
+        let cycle: [ComicBlockType] = [.dialogue, .caption, .sfx, .thought, .sign, .screen, .textMessage, .chyron, .titleCard, .note]
         let current = document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].type
+        guard !document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].isLocked else { return }
         let nextIndex = cycle.index(after: cycle.firstIndex(of: current) ?? cycle.startIndex)
-        document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].type = cycle[nextIndex == cycle.endIndex ? cycle.startIndex : nextIndex]
+        let nextType = cycle[nextIndex == cycle.endIndex ? cycle.startIndex : nextIndex]
+        document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].type = nextType
+        if nextType == .thought {
+            document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].delivery = .thought
+        }
     }
 
     private func setSelectedBlockType(_ type: ComicBlockType) {
@@ -256,7 +267,11 @@ struct ScriptEditorView: View {
             let blockIndex = document.model.pages[pageIndex].panels[panelIndex].textBlocks.firstIndex(where: { $0.id == blockID })
         else { return }
 
+        guard !document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].isLocked else { return }
         document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].type = type
+        if type == .thought {
+            document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].delivery = .thought
+        }
     }
 
     private func deleteSelection() {
@@ -270,6 +285,7 @@ struct ScriptEditorView: View {
                 let blockIndex = document.model.pages[pageIndex].panels[panelIndex].textBlocks.firstIndex(where: { $0.id == blockID })
             else { return }
 
+            guard !document.model.pages[pageIndex].panels[panelIndex].textBlocks[blockIndex].isLocked else { return }
             document.model.pages[pageIndex].panels[panelIndex].textBlocks.remove(at: blockIndex)
             self.selection = .panel(pageID, panelID)
 

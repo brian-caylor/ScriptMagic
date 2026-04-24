@@ -35,6 +35,17 @@ public enum ComicDiagnostics {
             var seenPanels: Set<Int> = []
             var expectedPanel = 1
 
+            if let expectedPanelCount = page.expectedPanelCount, expectedPanelCount != page.panels.count {
+                diagnostics.append(
+                    ComicDiagnostic(
+                        id: "page-\(page.number)-panel-count",
+                        severity: .warning,
+                        message: "Page \(page.number) declares \(expectedPanelCount) panels but has \(page.panels.count).",
+                        pageNumber: page.number
+                    )
+                )
+            }
+
             for panel in page.panels {
                 if panel.visualDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     diagnostics.append(
@@ -77,7 +88,7 @@ public enum ComicDiagnostics {
                 expectedPanel += 1
 
                 let panelLetteringWords = panel.textBlocks.reduce(0) { total, block in
-                    guard block.type == .dialogue || block.type == .caption else { return total }
+                    guard block.type.isReaderFacingText else { return total }
                     return total + wordCount(block.text)
                 }
 
@@ -93,7 +104,7 @@ public enum ComicDiagnostics {
                     )
                 }
 
-                for block in panel.textBlocks where block.type == .dialogue || block.type == .caption {
+                for block in panel.textBlocks where block.type.isReaderFacingText {
                     let words = wordCount(block.text)
                     if words > 25 {
                         diagnostics.append(

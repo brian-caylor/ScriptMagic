@@ -18,7 +18,7 @@
     </Paragraph>
   </TitlePage>
   <Content>
-    <Paragraph Type="Page">
+    <Paragraph Type="Page" Layout="splash" ExpectedPanels="3">
       <Text>PAGE 1: OPENING IMAGE</Text>
     </Paragraph>
     <Paragraph Type="Note">
@@ -30,8 +30,8 @@
     <Paragraph Type="Description">
       <Text>Wide establishing panel. Describe only what the artist needs to draw: location, characters present, action, mood, key props, and camera/framing if important. Avoid prose that cannot appear visually.</Text>
     </Paragraph>
-    <Paragraph Type="Caption">
-      <Text>CAPTION TEXT GOES HERE.</Text>
+    <Paragraph Type="Caption" Speaker="ELENA" Locked="true">
+      <Text>This caption is attributed to Elena and protected from accidental revision.</Text>
     </Paragraph>
     <Paragraph Type="Sound Effects">
       <Text>SFX TEXT</Text>
@@ -42,11 +42,11 @@
     <Paragraph Type="Dialogue">
       <Text>Dialogue balloon text goes here.</Text>
     </Paragraph>
-    <Paragraph Type="Character">
+    <Paragraph Type="Character" Delivery="op">
       <Text>CHARACTER NAME (OP)</Text>
     </Paragraph>
     <Paragraph Type="Dialogue">
-      <Text>Off-panel dialogue uses OP, OFF, whisper, burst, small, weak, radio, or another lettering modifier in parentheses.</Text>
+      <Text>Off-panel dialogue uses a structured Delivery attribute.</Text>
     </Paragraph>
     <Paragraph Type="Panel">
       <Text>Panel 2</Text>
@@ -54,7 +54,22 @@
     <Paragraph Type="Description">
       <Text>Medium panel. Continue the visual action from Panel 1. Each panel should be a single drawable moment, not a chain of multiple sequential actions.</Text>
     </Paragraph>
-    <Paragraph Type="Character">
+    <Paragraph Type="Sign">
+      <Text>AUTHORIZED PERSONNEL ONLY</Text>
+    </Paragraph>
+    <Paragraph Type="Screen">
+      <Text>CONNECTION LOST</Text>
+    </Paragraph>
+    <Paragraph Type="Text Message" Locked="true">
+      <Text>where are you?</Text>
+    </Paragraph>
+    <Paragraph Type="Chyron">
+      <Text>BREAKING NEWS</Text>
+    </Paragraph>
+    <Paragraph Type="Title Card">
+      <Text>THREE YEARS EARLIER</Text>
+    </Paragraph>
+    <Paragraph Type="Character" Delivery="thought">
       <Text>CHARACTER NAME (thought)</Text>
     </Paragraph>
     <Paragraph Type="Dialogue">
@@ -69,19 +84,13 @@
     <Paragraph Type="Description">
       <Text>Close-up or reaction panel. If the page needs a specific layout, say so here. Otherwise, leave exact layout choices to the artist.</Text>
     </Paragraph>
-    <Paragraph Type="Character">
-      <Text>CHARACTER NAME</Text>
+    <Paragraph Type="Character" Delivery="voicemail">
+      <Text>SECOND CHARACTER (VOICEMAIL)</Text>
     </Paragraph>
-    <Paragraph Type="Dialogue">
-      <Text>Keep each balloon short when possible.</Text>
+    <Paragraph Type="Dialogue" Locked="true">
+      <Text>Protected dialogue balloon text.</Text>
     </Paragraph>
-    <Paragraph Type="Character">
-      <Text>SECOND CHARACTER</Text>
-    </Paragraph>
-    <Paragraph Type="Dialogue">
-      <Text>Multiple dialogue balloons in the same panel stay in intended reading order.</Text>
-    </Paragraph>
-    <Paragraph Type="Page">
+    <Paragraph Type="Page" Layout="standard" ExpectedPanels="2">
       <Text>PAGE 2: NEXT STORY BEAT</Text>
     </Paragraph>
     <Paragraph Type="Note">
